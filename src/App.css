@@ -1,38 +1,157 @@
+. {
+	margin-top: 0;
+}
+body {
+	background-color: #000000;
+}
+
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	height: 40vmin;
+	pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.paragrafHome {
+	text-align: center;
+	color: white;
+	font-size: 45px;
+	padding: 10px;
+}
+.photo {
+	text-align: center;
+	margin-top: 60px;
+}
+.img {
+	text-align: center;
+	width: 30%;
+	margin-left: 30px;
+	margin-bottom: 60px;
+}
+.explanation {
+	text-align: justify;
+	border: white;
+	padding: 30px;
+	color: white;
+	margin-bottom: 60px;
+}
+
+.divHome {
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(104, 99, 190, 1) 0%,
+		rgba(73, 73, 105, 1) 55%,
+		rgba(35, 24, 238, 0.9331933456976541) 79%,
+		rgba(0, 212, 255, 1) 92%
+	);
+}
+
+.main-div {
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(104, 99, 190, 1) 0%,
+		rgba(73, 73, 105, 1) 55%,
+		rgba(35, 24, 238, 0.9331933456976541) 79%,
+		rgba(0, 212, 255, 1) 92%
+	);
+}
+.copyrig {
+	color: white;
+}
+
+.link {
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 20px;
+}
+
+h1 {
+	margin-left: 30px;
+	color: white;
+}
+.date {
+	text-align: center;
+	color: white;
+}
+.video {
+	display: flex;
+	margin-bottom: 60px;
+	margin-top: 60px;
+	margin-left: 30px;
+}
+
+.signin {
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper {
+}
+.form-wrapper {
+}
+.username {
+	height: 45px;
+	text-align: center;
+}
+.password {
+	height: 45px;
+	text-align: center;
+}
+.button {
+	height: 45px;
+	text-align: center;
+}
+
+.input {
+	width: 250px;
+	height: 30px;
+	border-radius: 5px;
+}
+.buttonEl {
+	width: 80px;
+	height: 35px;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	border: none;
+	font-size: 20px;
+}
+.link-contact {
+	display: flex;
+	flex-direction: column;
+	margin-top: 150px;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 20px;
 }
