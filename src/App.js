@@ -17,7 +17,7 @@ import Mars from './Mars';
 const App = ({ users }) => {
 	const [ user, setUser ] = useState(null);
 	return (
-		<StaticRouter>
+		<BrowserRouter>
 			<div
 				className="main-div"
 				style={{
@@ -40,7 +40,7 @@ const App = ({ users }) => {
 				<Route component={Mars} path="/mars" />
 				<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" />}</Route>
 			</div>
-		</StaticRouter>
+		</BrowserRouter>
 	);
 };
 
