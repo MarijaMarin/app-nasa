@@ -29,16 +29,18 @@ const App = ({ users }) => {
 					height: '100vh'
 				}}
 			>
-				<Route component={Home} path="/" exact />
-				<Route component={NasaPhoto} path="/nasaphoto" exact />
-				<Route component={Space} path="/spacenews" exact />
-				<Route component={Hubble} path="/hubble" exact />
+				<Switch>
+					<Route component={Home} path="/" exact />
+					<Route component={NasaPhoto} path="/nasaphoto" exact />
+					<Route component={Space} path="/spacenews" exact />
+					<Route component={Hubble} path="/hubble" exact />
 
-				<Route path="/signin" exact>
-					<Signin setUser={setUser} users={users} />
-				</Route>
-				<Route component={Mars} path="/mars" exact />
-				<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" exact />}</Route>
+					<Route path="/signin" exact>
+						<Signin setUser={setUser} users={users} />
+					</Route>
+					<Route component={Mars} path="/mars" exact />
+					<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" exact />}</Route>
+				</Switch>
 			</div>
 		</BrowserRouter>
 	);
