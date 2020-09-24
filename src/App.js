@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getDayFoto, spaceNews } from './services';
-import { StaticRouter, Route, Link, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Redirect, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import NasaPhoto from './NasaPhoto';
@@ -29,18 +29,16 @@ const App = ({ users }) => {
 					height: '100vh'
 				}}
 			>
-				<Switch>
-					<Route component={Home} path="/" exact />
-					<Route component={NasaPhoto} path="/nasaphoto" exact />
-					<Route component={Space} path="/spacenews" exact />
-					<Route component={Hubble} path="/hubble" exact />
+				<Route component={Home} path="/" exact />
+				<Route component={NasaPhoto} path="/nasaphoto" />
+				<Route component={Space} path="/spacenews" />
+				<Route component={Hubble} path="/hubble" />
 
-					<Route path="/signin" exact>
-						<Signin setUser={setUser} users={users} />
-					</Route>
-					<Route component={Mars} path="/mars" exact />
-					<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" exact />}</Route>
-				</Switch>
+				<Route path="/signin" exact>
+					<Signin setUser={setUser} users={users} />
+				</Route>
+				<Route component={Mars} path="/mars" />
+				<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" />}</Route>
 			</div>
 		</BrowserRouter>
 	);
