@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getDayFoto, spaceNews } from './services';
-import { BrowserRouter, Route, Link, Redirect, Switch } from 'react-router-dom';
+import { StaticRouter, Route, Link, Redirect, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import NasaPhoto from './NasaPhoto';
@@ -17,7 +17,7 @@ import Mars from './Mars';
 const App = ({ users }) => {
 	const [ user, setUser ] = useState(null);
 	return (
-		<BrowserRouter>
+		<StaticRouter>
 			<div
 				className="main-div"
 				style={{
@@ -40,7 +40,7 @@ const App = ({ users }) => {
 				<Route component={Mars} path="/mars" />
 				<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" />}</Route>
 			</div>
-		</BrowserRouter>
+		</StaticRouter>
 	);
 };
 
