@@ -30,15 +30,15 @@ const App = ({ users }) => {
 				}}
 			>
 				<Route component={Home} path="/" exact />
-				<Route component={NasaPhoto} path="/nasaphoto" />
-				<Route component={Space} path="/spacenews" />
-				<Route component={Hubble} path="/hubble" />
+				<Route component={NasaPhoto} path="/nasaphoto" exact />
+				<Route component={Space} path="/spacenews" exact />
+				<Route component={Hubble} path="/hubble" exact />
 
-				<Route path="/signin">
+				<Route path="/signin" exact>
 					<Signin setUser={setUser} users={users} />
 				</Route>
-				<Route component={Mars} path="/mars" />
-				<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" />}</Route>
+				<Route component={Mars} path="/mars" exact />
+				<Route path="/contact">{user ? <Contact /> : <Redirect to="/signin" exact />}</Route>
 			</div>
 		</BrowserRouter>
 	);
